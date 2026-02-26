@@ -54,7 +54,7 @@ export const AdminDashboard = () => {
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Welcome, Admin!</h1>
           <p className="text-muted-foreground mt-1">Here is an overview of the platform activity.</p>
         </div>
-        <Badge variant="secondary" className="text-sm px-3 py-1 self-start md:self-auto bg-purple-100 text-purple-800 hover:bg-purple-200 border-none">Administrator</Badge>
+        <Badge variant="secondary" className="text-sm px-3 py-1 self-start md:self-auto bg-accent/10 text-accent hover:bg-accent/20 border-none">Administrator</Badge>
       </motion.div>
 
       {/* Metrics Grid */}
@@ -64,7 +64,7 @@ export const AdminDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Alumni Registered</p>
-                <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                   <Users className="h-5 w-5" />
                 </div>
               </div>
@@ -81,7 +81,7 @@ export const AdminDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Pending Approvals</p>
-                <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center">
                   <UserCheck className="h-5 w-5" />
                 </div>
               </div>
@@ -98,7 +98,7 @@ export const AdminDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Events Created</p>
-                <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/10 text-accent rounded-full flex items-center justify-center">
                   <Calendar className="h-5 w-5" />
                 </div>
               </div>
@@ -115,7 +115,7 @@ export const AdminDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Active Mentorships</p>
-                <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-destructive/10 text-destructive rounded-full flex items-center justify-center">
                   <Users className="h-5 w-5" />
                 </div>
               </div>
@@ -150,10 +150,10 @@ export const AdminDashboard = () => {
                         <p className="text-xs text-muted-foreground">{user.batch}</p>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Button size="icon" variant="ghost" className="h-8 w-8 text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50" onClick={() => approveUser(user.id)}>
+                        <Button size="icon" variant="ghost" className="h-8 w-8 text-secondary hover:text-secondary/80 hover:bg-secondary/10" onClick={() => approveUser(user.id)}>
                           <Check className="h-4 w-4" />
                         </Button>
-                        <Button size="icon" variant="ghost" className="h-8 w-8 text-rose-600 hover:text-rose-700 hover:bg-rose-50" onClick={() => rejectUser(user.id)}>
+                        <Button size="icon" variant="ghost" className="h-8 w-8 text-destructive hover:text-destructive/80 hover:bg-destructive/10" onClick={() => rejectUser(user.id)}>
                           <X className="h-4 w-4" />
                         </Button>
                       </div>

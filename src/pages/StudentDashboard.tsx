@@ -56,7 +56,7 @@ export const StudentDashboard = () => {
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Hi {user?.name.split(' ')[0]}, let's connect with alumni and opportunities.</h1>
           <p className="text-muted-foreground mt-1">Here is your personalized dashboard.</p>
         </div>
-        <Badge variant="secondary" className="text-sm px-3 py-1 self-start md:self-auto bg-blue-100 text-blue-800 hover:bg-blue-200 border-none">Student</Badge>
+        <Badge variant="secondary" className="text-sm px-3 py-1 self-start md:self-auto bg-primary/10 text-primary hover:bg-primary/20 border-none">Student</Badge>
       </motion.div>
 
       {/* Stats Cards */}
@@ -66,7 +66,7 @@ export const StudentDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Mentors Available</p>
-                <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                   <UserCircle className="h-5 w-5" />
                 </div>
               </div>
@@ -83,7 +83,7 @@ export const StudentDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Upcoming Events</p>
-                <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center">
                   <Calendar className="h-5 w-5" />
                 </div>
               </div>
@@ -100,7 +100,7 @@ export const StudentDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Internship Offers</p>
-                <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/10 text-accent rounded-full flex items-center justify-center">
                   <Briefcase className="h-5 w-5" />
                 </div>
               </div>

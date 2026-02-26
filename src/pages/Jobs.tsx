@@ -120,10 +120,10 @@ export const Jobs = () => {
             <Card className="hover:shadow-md transition-shadow flex flex-col h-full border-border">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start">
-                  <div className="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xl mb-4">
                     {job.company.charAt(0)}
                   </div>
-                  <Badge variant={job.type === 'Internship' ? 'secondary' : 'default'} className={job.type === 'Internship' ? 'bg-amber-100 text-amber-800 hover:bg-amber-200 border-none' : 'bg-blue-100 text-blue-800 hover:bg-blue-200 border-none'}>
+                  <Badge variant={job.type === 'Internship' ? 'secondary' : 'default'} className={job.type === 'Internship' ? 'bg-secondary/10 text-secondary hover:bg-secondary/20 border-none' : 'bg-primary/10 text-primary hover:bg-primary/20 border-none'}>
                     {job.type}
                   </Badge>
                 </div>

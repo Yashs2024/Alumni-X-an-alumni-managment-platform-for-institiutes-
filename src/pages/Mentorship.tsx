@@ -128,7 +128,7 @@ export const Mentorship = () => {
                               </div>
                               <div>
                                 <h4 className="font-semibold text-foreground">{req.studentName}</h4>
-                                <Badge variant={req.status === 'Pending' ? 'outline' : req.status === 'Accepted' ? 'secondary' : 'destructive'} className={req.status === 'Accepted' ? 'bg-emerald-100 text-emerald-800 border-none' : req.status === 'Pending' ? 'bg-amber-100 text-amber-800 border-none' : 'bg-rose-100 text-rose-800 border-none'}>
+                                <Badge variant={req.status === 'Pending' ? 'outline' : req.status === 'Accepted' ? 'secondary' : 'destructive'} className={req.status === 'Accepted' ? 'bg-secondary/10 text-secondary border-none' : req.status === 'Pending' ? 'bg-accent/10 text-accent border-none' : 'bg-destructive/10 text-destructive border-none'}>
                                   {req.status}
                                 </Badge>
                               </div>
@@ -140,10 +140,10 @@ export const Mentorship = () => {
                           </div>
                           {req.status === 'Pending' && (
                             <div className="flex space-x-3 sm:ml-6">
-                              <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700 text-white" onClick={() => updateMentorshipStatus(req.id, 'Accepted')}>
+                              <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" onClick={() => updateMentorshipStatus(req.id, 'Accepted')}>
                                 <Check className="h-4 w-4 mr-1.5" /> Accept
                               </Button>
-                              <Button size="sm" variant="outline" className="text-rose-600 border-rose-200 hover:bg-rose-50 hover:text-rose-700" onClick={() => updateMentorshipStatus(req.id, 'Rejected')}>
+                              <Button size="sm" variant="outline" className="text-destructive border-destructive/20 hover:bg-destructive/10 hover:text-destructive" onClick={() => updateMentorshipStatus(req.id, 'Rejected')}>
                                 <X className="h-4 w-4 mr-1.5" /> Decline
                               </Button>
                             </div>
@@ -177,7 +177,7 @@ export const Mentorship = () => {
                               <p className="text-xs font-medium text-muted-foreground mt-0.5">{mentor?.jobTitle} at {mentor?.company}</p>
                             </div>
                           </div>
-                          <Badge variant={req.status === 'Pending' ? 'outline' : req.status === 'Accepted' ? 'secondary' : 'destructive'} className={req.status === 'Accepted' ? 'bg-emerald-100 text-emerald-800 border-none' : req.status === 'Pending' ? 'bg-amber-100 text-amber-800 border-none' : 'bg-rose-100 text-rose-800 border-none'}>
+                          <Badge variant={req.status === 'Pending' ? 'outline' : req.status === 'Accepted' ? 'secondary' : 'destructive'} className={req.status === 'Accepted' ? 'bg-secondary/10 text-secondary border-none' : req.status === 'Pending' ? 'bg-accent/10 text-accent border-none' : 'bg-destructive/10 text-destructive border-none'}>
                             {req.status}
                           </Badge>
                         </div>

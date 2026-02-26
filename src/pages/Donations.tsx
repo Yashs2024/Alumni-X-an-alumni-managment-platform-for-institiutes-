@@ -67,31 +67,31 @@ export const Donations = () => {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <Card className="bg-emerald-600 text-white border-none shadow-md hover:shadow-lg transition-shadow">
+          <Card className="bg-secondary text-secondary-foreground border-none shadow-md hover:shadow-lg transition-shadow">
             <CardHeader className="pb-2">
-              <CardTitle className="text-emerald-100 text-sm font-medium">Active Donors</CardTitle>
+              <CardTitle className="text-secondary-foreground/80 text-sm font-medium">Active Donors</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-4xl font-bold flex items-center">
                 <Heart className="h-8 w-8 mr-2 opacity-80" />
                 {platformStats.donors}
               </div>
-              <p className="text-emerald-200 text-sm mt-2">Alumni giving back</p>
+              <p className="text-secondary-foreground/80 text-sm mt-2">Alumni giving back</p>
             </CardContent>
           </Card>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <Card className="bg-amber-500 text-white border-none shadow-md hover:shadow-lg transition-shadow">
+          <Card className="bg-accent text-accent-foreground border-none shadow-md hover:shadow-lg transition-shadow">
             <CardHeader className="pb-2">
-              <CardTitle className="text-amber-100 text-sm font-medium">Projects Funded</CardTitle>
+              <CardTitle className="text-accent-foreground/80 text-sm font-medium">Projects Funded</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-4xl font-bold flex items-center">
                 <Gift className="h-8 w-8 mr-2 opacity-80" />
                 {platformStats.projectsFunded}
               </div>
-              <p className="text-amber-100 text-sm mt-2">Impacting student lives</p>
+              <p className="text-accent-foreground/80 text-sm mt-2">Impacting student lives</p>
             </CardContent>
           </Card>
         </motion.div>

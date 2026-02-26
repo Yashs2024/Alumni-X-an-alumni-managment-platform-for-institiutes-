@@ -13,7 +13,7 @@ export const Events = () => {
   const { events, addEvent } = useData();
   const [searchTerm, setSearchTerm] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [newEvent, setNewEvent] = useState({ title: '', date: '', location: '', description: '' });
+  const [newEvent, setNewEvent] = useState({ title: '', date: '', location: '', description: '', type: 'Webinar', imageUrl: '' });
 
   const filteredEvents = events.filter(event => 
     event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -28,7 +28,7 @@ export const Events = () => {
       attendees: [],
     });
     setIsDialogOpen(false);
-    setNewEvent({ title: '', date: '', location: '', description: '' });
+    setNewEvent({ title: '', date: '', location: '', description: '', type: 'Webinar', imageUrl: '' });
   };
 
   const containerVariants = {
@@ -84,6 +84,24 @@ export const Events = () => {
                   <Input required value={newEvent.location} onChange={e => setNewEvent({...newEvent, location: e.target.value})} placeholder="e.g. Main Campus Auditorium" />
                 </div>
                 <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Event Type</label>
+                  <select 
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    value={newEvent.type} 
+                    onChange={e => setNewEvent({...newEvent, type: e.target.value})}
+                  >
+                    <option value="Webinar">Webinar</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Meetup">Meetup</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Image URL (Optional)</label>
+                  <Input value={newEvent.imageUrl} onChange={e => setNewEvent({...newEvent, imageUrl: e.target.value})} placeholder="https://example.com/image.jpg" />
+                </div>
+                <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">Description</label>
                   <textarea 
                     className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
@@ -113,10 +131,22 @@ export const Events = () => {
       <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredEvents.map(event => (
           <motion.div key={event.id} variants={itemVariants}>
-            <Card className="hover:shadow-md transition-shadow flex flex-col h-full border-border">
+            <Card className="hover:shadow-md transition-shadow flex flex-col h-full border-border overflow-hidden">
+              {event.imageUrl && (
+                <div className="w-full h-48 overflow-hidden">
+                  <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover transition-transform hover:scale-105 duration-300" referrerPolicy="no-referrer" />
+                </div>
+              )}
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
-                  <Calendar className="h-6 w-6" />
+                <div className="flex justify-between items-start">
+                  <div className="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-4">
+                    <Calendar className="h-6 w-6" />
+                  </div>
+                  {event.type && (
+                    <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
+                      {event.type}
+                    </span>
+                  )}
                 </div>
                 <CardTitle className="text-xl text-foreground">{event.title}</CardTitle>
                 <CardDescription className="text-base font-medium text-foreground/80 mt-1">

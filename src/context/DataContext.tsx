@@ -8,6 +8,8 @@ export interface Event {
   location: string;
   description: string;
   attendees: string[];
+  imageUrl?: string;
+  type?: string;
 }
 
 export interface Job {
@@ -58,8 +60,8 @@ const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [events, setEvents] = useState<Event[]>([
-    { id: '1', title: 'Annual Alumni Meet 2024', date: '2024-12-15', location: 'Main Campus Auditorium', description: 'Join us for the biggest alumni gathering of the year.', attendees: ['1', '2'] },
-    { id: '2', title: 'Tech Talk: AI in 2025', date: '2024-11-20', location: 'Virtual', description: 'A deep dive into the future of AI with industry experts.', attendees: [] },
+    { id: '1', title: 'Annual Alumni Meet 2024', date: '2024-12-15', location: 'Main Campus Auditorium', description: 'Join us for the biggest alumni gathering of the year.', attendees: ['1', '2'], type: 'Reunion', imageUrl: 'https://picsum.photos/seed/alumni1/800/400?blur=2' },
+    { id: '2', title: 'Tech Talk: AI in 2025', date: '2024-11-20', location: 'Virtual', description: 'A deep dive into the future of AI with industry experts.', attendees: [], type: 'Webinar', imageUrl: 'https://picsum.photos/seed/tech1/800/400?blur=2' },
   ]);
 
   const [jobs, setJobs] = useState<Job[]>([

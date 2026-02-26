@@ -77,7 +77,7 @@ export const Reports = () => {
           <Card className="border-border shadow-sm">
             <CardHeader className="border-b border-border pb-4">
               <CardTitle className="flex items-center text-xl font-semibold text-foreground">
-                <TrendingUp className="mr-2 h-5 w-5 text-emerald-500" />
+                <TrendingUp className="mr-2 h-5 w-5 text-secondary" />
                 Monthly Donation Trends
               </CardTitle>
               <CardDescription>Total funds raised over the past year</CardDescription>
@@ -126,7 +126,7 @@ export const Reports = () => {
           <Card className="border-border shadow-sm h-full">
             <CardHeader className="border-b border-border pb-4">
               <CardTitle className="flex items-center text-xl font-semibold text-foreground">
-                <Calendar className="mr-2 h-5 w-5 text-amber-500" />
+                <Calendar className="mr-2 h-5 w-5 text-accent" />
                 Event Popularity
               </CardTitle>
               <CardDescription>Distribution of attendees across event types</CardDescription>

@@ -46,7 +46,7 @@ export const AlumniDashboard = () => {
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Welcome back, {user?.name.split(' ')[0]}!</h1>
           <p className="text-muted-foreground mt-1">Here is what's happening in your alumni network.</p>
         </div>
-        <Badge variant="secondary" className="text-sm px-3 py-1 self-start md:self-auto bg-emerald-100 text-emerald-800 hover:bg-emerald-200 border-none">Alumni</Badge>
+        <Badge variant="secondary" className="text-sm px-3 py-1 self-start md:self-auto bg-secondary/10 text-secondary hover:bg-secondary/20 border-none">Alumni</Badge>
       </motion.div>
 
       {/* Key Stats */}
@@ -56,7 +56,7 @@ export const AlumniDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Total Alumni</p>
-                <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                   <Users className="h-5 w-5" />
                 </div>
               </div>
@@ -73,7 +73,7 @@ export const AlumniDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Upcoming Events</p>
-                <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-secondary/10 text-secondary rounded-full flex items-center justify-center">
                   <Calendar className="h-5 w-5" />
                 </div>
               </div>
@@ -90,7 +90,7 @@ export const AlumniDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Mentors Available</p>
-                <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/10 text-accent rounded-full flex items-center justify-center">
                   <Users className="h-5 w-5" />
                 </div>
               </div>
@@ -107,7 +107,7 @@ export const AlumniDashboard = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-medium text-muted-foreground">Your Donations</p>
-                <div className="w-10 h-10 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-destructive/10 text-destructive rounded-full flex items-center justify-center">
                   <IndianRupee className="h-5 w-5" />
                 </div>
               </div>

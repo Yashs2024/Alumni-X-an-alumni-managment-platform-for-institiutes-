@@ -100,8 +100,8 @@ export const Feed = () => {
               <CardContent className="p-4 pt-3">
                 <p className="text-foreground/90 whitespace-pre-wrap">{post.content}</p>
                 <div className="flex items-center space-x-6 mt-4 pt-4 border-t border-border">
-                  <button className="flex items-center text-sm text-muted-foreground hover:text-rose-500 transition-colors group">
-                    <Heart className="h-4 w-4 mr-1.5 group-hover:fill-rose-500" />
+                  <button className="flex items-center text-sm text-muted-foreground hover:text-destructive transition-colors group">
+                    <Heart className="h-4 w-4 mr-1.5 group-hover:fill-destructive" />
                     {post.likes}
                   </button>
                   <button className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">

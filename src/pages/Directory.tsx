@@ -80,7 +80,7 @@ export const Directory = () => {
                         <p className="text-sm font-medium text-muted-foreground mt-0.5">{person.jobTitle} at {person.company}</p>
                       </div>
                       {person.isMentor && (
-                        <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 border-none">Mentor</Badge>
+                        <Badge variant="secondary" className="bg-secondary/10 text-secondary hover:bg-secondary/20 border-none">Mentor</Badge>
                       )}
                     </div>
                     
